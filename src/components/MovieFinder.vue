@@ -1,6 +1,6 @@
 <template>
   <div id="movie-finder">
-<input id="movie-title-input" type="text" placeholder="movie's title">
+<input id="movie-title-input" type="text" placeholder="movie's title" v-model="moviesTitle">
 <div id="disponibilidad">
 <input type="radio" name="available" value="Available" checked/> Available
 <input type="radio" name="available" value="Sold"/> Sold
@@ -9,10 +9,18 @@
 </template>
 
 <script>
-
+import { mapState } from 'vuex';
 
 export default {
-   name: 'MovieFinder'
+   name: 'MovieFinder',
+   data () {
+       return {
+           moviesTitle:""
+       }
+   },
+     computed: {
+    ...mapState('movies', ['movies'])
+  } 
  
 }
 </script>

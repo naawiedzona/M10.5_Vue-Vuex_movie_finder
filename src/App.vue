@@ -1,6 +1,9 @@
 <template>
   <div id="app">
+    <div id="header">
     <h1 id="app-title">Movie finder</h1>
+    <img src="../src/assets/movies-app.jpg" alt="">
+    </div>
     <MovieFinder></MovieFinder>
    <MovieList>
    </MovieList>
@@ -22,16 +25,28 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin-top: 60px;
+  background-color: rgba(0, 0, 0, 0.932);
+  width: 100vw;
+  position:relative;
+}
+#header{
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 #app-title{
-  background-color: rgb(214, 143, 115);
-  padding: 25px;
+  background-color:rgba(19, 19, 19, 0.699);
+  color: rgba(224, 12, 12, 0.678);
+  width: 60%;
+  line-height: 120px;
+  font-size: 60px;
+  position: absolute;
+  margin-top: 200px;
+}
+img{
   width: 70%;
-  margin: 0 auto;
+  max-height: 500px;
+  vertical-align: top;
 }
 </style>

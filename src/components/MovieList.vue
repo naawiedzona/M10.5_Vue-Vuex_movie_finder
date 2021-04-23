@@ -1,7 +1,7 @@
 <template>
   <div id="movie-list">
 <MovieItem
-v-for="(movie, index) in movies"
+v-for="(movie, index) in moviesLetter"
 :key="index"
 :title="movie.title"
 :movieId="movie.id"
@@ -12,9 +12,9 @@ v-for="(movie, index) in movies"
 </template>
 
 <script>
-
+import store from './../store/index';
 import MovieItem from './MovieItem';
-import { mapState } from 'vuex';
+//import { mapState } from 'vuex';
 
 export default {
     name: 'MovieList',
@@ -22,7 +22,16 @@ export default {
         MovieItem
     },
   computed: {
-    ...mapState('movies', ['movies'])
+   // ...mapState('movies', ['movies'])
+    movies () {
+      return store.state.movies;
+    },
+    moviesAvailable () {
+      return store.getters.moviesAvailable;
+    },
+    moviesLetter () {
+      return store.getters.moviesLetter;
+    }
   } 
 }
 </script>

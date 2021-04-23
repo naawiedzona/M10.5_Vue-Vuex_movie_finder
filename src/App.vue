@@ -38,7 +38,7 @@ export default {
 #app-title{
   background-color:rgba(19, 19, 19, 0.699);
   color: rgba(224, 12, 12, 0.678);
-  width: 60%;
+  width: 70%;
   line-height: 120px;
   font-size: 60px;
   position: absolute;

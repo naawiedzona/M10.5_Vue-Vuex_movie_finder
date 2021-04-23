@@ -1,7 +1,9 @@
 <template>
   <div id="movie-finder">
+    <h3 id="find-text">Find the best movies: </h3>
     <input id="movie-title-input" type="text" placeholder="movie's title" v-model="searchInput">
     <div id="disponibilidad">
+      
       <input type="radio" :value="true" v-model="availableInput"/> Available
       <input type="radio" :value="false" v-model="availableInput"/> Sold Out
     </div>
@@ -47,7 +49,9 @@ export default {
 #movie-finder{
     margin: 50px;
 }
-
+#find-text{
+  color: rgba(224, 12, 12, 0.678);
+}
 #movie-title-input {
     width: 50%;
     height: 45px;

@@ -8,6 +8,7 @@ v-for="(movie, index) in films"
 :description="movie.description"
 :available="movie.available"
 ></MovieItem>
+<div id="zero-movies" v-if="films.length<1">There are no movies matching your search ...  </div>
   </div>
 </template>
 
@@ -32,5 +33,12 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+}
+
+#zero-movies{
+  border: 1px solid rgba(224, 12, 12, 0.678);
+  background-color: rgb(82, 78, 78);
+  width: 50%;
+  line-height: 50px;
 }
 </style>
